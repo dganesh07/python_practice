@@ -36,8 +36,45 @@ def reverse_words_in_sentence():
     result = split_sentence[::-1]
     print(" ".join(result))
 
+#First Non-Repeating Integer in an Array
+def non_repeating_ints():
+    arr = [1, 1, 2, 4, 5, 5, 7, 7]
 
-reverse_words_in_sentence()
+    temp_dict = {}
+
+    for item in arr:
+        if item not in temp_dict:
+            temp_dict[item] = 0
+        temp_dict[item] += 1
+    
+    for val in temp_dict:
+        if temp_dict[val] == 1:
+            print(val)
+
+
+def repeating_letters_in_string():
+    string = "helloo"
+    temp_dict = {}
+
+    for item in string:
+        if item not in temp_dict:
+            temp_dict[item] = 0
+        temp_dict[item] += 1
+
+    for obj in temp_dict:
+        if temp_dict[obj] > 1:
+            print(obj)
+            
+
+
+repeating_letters_in_string()
+
+
+
+#non_repeating_ints()
+
+
+#reverse_words_in_sentence()
 
 #elem_that_appears_oly_once()
 #multiply_array_pairs()
