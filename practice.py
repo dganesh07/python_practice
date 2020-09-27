@@ -64,10 +64,26 @@ def repeating_letters_in_string():
     for obj in temp_dict:
         if temp_dict[obj] > 1:
             print(obj)
+
+
+def longestCommonPrefix(strs):
+    len_ = 0
+    a = zip(*strs)
+    print(a)
+    for i in a:
+        if len(set(i)) == 1:
+            len_ += 1
+        else: 
+            break
+    print(strs[0][:len_] if len_ > 0 else "")
             
 
 
-repeating_letters_in_string()
+longestCommonPrefix(["flow", "flower", "fl"])
+
+
+
+#repeating_letters_in_string()
 
 
 

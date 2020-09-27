@@ -25,6 +25,25 @@ def level_order(root):
         if temp.left != None:
             curret_queue.append(temp.left)
 
+def inorder(root):
+
+    if root:
+        inorder(root.left)
+        print (root.data)
+        inorder(root.right)
+
+def height(root):
+    if root == None:
+        return 0
+    
+    ltree = height(root.left)
+    rtree = height(root.right)
+    if ltree > rtree:
+        return ltree + 1
+    else:
+        return rtree + 1
+    
+
 
 if __name__ == '__main__': 
     root = newNode(0)  
@@ -38,4 +57,7 @@ if __name__ == '__main__':
     root.right.left = newNode(5)  
     root.right.right = newNode(6)  
 
-    level_order(root)
+    #level_order(root)
+    #height_of_tree = height(root)
+    #print(height_of_tree)
+    inorder(root)
