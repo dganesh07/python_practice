@@ -76,22 +76,31 @@ def longestCommonPrefix(strs):
         else: 
             break
     print(strs[0][:len_] if len_ > 0 else "")
+
+
+def longestCommonSubsequence():
+    arr = ["ABAB", "BABA"]
+
+    all_arr = zip(*arr)
+    len_ = 0
+    for i in all_arr:
+        if (len(set(i)) == 1):
+            len_ += 1
+        else:
+            break
+    print (arr[0: len_])
             
 
-
-longestCommonPrefix(["flow", "flower", "fl"])
-
+longestCommonSubsequence()
 
 
+
+
+
+#longestCommonPrefix(["flow", "flower", "fl"])
 #repeating_letters_in_string()
-
-
-
 #non_repeating_ints()
-
-
 #reverse_words_in_sentence()
-
 #elem_that_appears_oly_once()
 #multiply_array_pairs()
 #two_int_equal_to_sum()
