@@ -91,12 +91,7 @@ def longestCommonSubsequence():
     print (arr[0: len_])
             
 
-longestCommonSubsequence()
-
-
-
-
-
+#longestCommonSubsequence()
 #longestCommonPrefix(["flow", "flower", "fl"])
 #repeating_letters_in_string()
 #non_repeating_ints()
@@ -108,3 +103,11 @@ longestCommonSubsequence()
 
 
 
+def sums_str_num(my_str):
+    result = 0
+    for c in my_str:
+        if c.isdigit():
+            result += int(c)
+    print(result)
+
+sums_str_num("12AB34")
