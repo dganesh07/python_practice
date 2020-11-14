@@ -110,4 +110,16 @@ def sums_str_num(my_str):
             result += int(c)
     print(result)
 
-sums_str_num("12AB34")
+#sums_str_num("12AB34")
+
+
+def all_substrings_in_str(string):
+    result = []
+    # range is not inclusive of the last number
+    for i in range(0, len(string)):
+        # we need len(S)+1 as the slice of [1:4] print 1 2 3 => "abc" 
+        for j in range(i+1, len(string)+1):
+            result.append(string[i:j])
+    print(result)
+
+all_substrings_in_str("abc")
