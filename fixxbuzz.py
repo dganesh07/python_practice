@@ -8,6 +8,7 @@ def fizzbuzz():
             print ("buzz")
         else:
             print(num)
+            print("Test branch")
 
 
 fizzbuzz()
